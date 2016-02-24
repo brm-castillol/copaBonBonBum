@@ -1,4 +1,4 @@
-/*! Copa BonBonBum - v0.1.0 - 2016-02-23
+/*! Copa BonBonBum - v0.1.0 - 2016-02-24
 * https://github.com/cortesc/HTML
 * Copyright (c) 2016 Lady Castillo; Licensed MIT */
 a {
@@ -16,6 +16,7 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 h2 {
   color: #ac261b;
@@ -32,6 +33,33 @@ h3 {
 }
 i {
   font-size: 2.5rem;
+}
+footer {
+  background: #1b437a;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  margin-top: 2rem;
+}
+.list-footer {
+  margin: 0 auto;
+  padding: 0;
+  width: 270px;
+}
+.list-footer li {
+  font-family: 'flama-l', sans-serif;
+  list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
+  max-width: 300px;
+}
+.list-footer li a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.list-footer li a:hover {
+  color: #0078bd;
 }
 @font-face {
   font-family: 'flama';
@@ -78,6 +106,89 @@ i {
 .cont-info-acor {
   background: rgba(255,255,255,0.6);
 }
+.switch,
+.switch * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+.switch label {
+  cursor: pointer;
+  font-family: 'flama-l', sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  width: 50%;
+}
+.switch label input[type=checkbox] {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  width: 0;
+  height: 0;
+}
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #fff;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #fff;
+}
+.switch label .lever {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 15px;
+  background-color: #69150a;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  margin-right: 10px;
+  -o-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+  margin: 0 16px;
+}
+.switch label .lever:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-color: #f1f1f1;
+  -webkit-border-radius: 21px;
+  border-radius: 21px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4);
+  left: -5px;
+  top: -3px;
+  -o-transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+  -ms-transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+  -webkit-transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+  -moz-transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+  transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+}
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active:after {
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4), 0 0 0 15px rgba(255,64,129,0.1);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4), 0 0 0 15px rgba(255,64,129,0.1);
+}
+input[type=checkbox]:not(:disabled) ~ .lever:active:after {
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4), 0 0 0 15px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4), 0 0 0 15px rgba(0,0,0,0.08);
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  left: 24px;
+}
+.switch input[type=checkbox][disabled] + .lever {
+  cursor: default;
+}
+.switch label input[type=checkbox][disabled] + .lever:after,
+.switch label input[type=checkbox][disabled]:checked + .lever:after {
+  background-color: #69150a;
+}
 .table {
   font-size: 1.4rem;
   line-heigth: 0.8rem;
@@ -89,6 +200,7 @@ i {
 .cont-tabla-punt {
   background: #dd1d40;
   padding-top: 1rem;
+  margin-bottom: 2rem;
 }
 label {
   color: #fff;
@@ -101,6 +213,8 @@ label {
 select.form-control {
   background: #fff;
   border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   display: inline-block;
   padding: 0.5rem 1rem;
   width: 70% !important;
@@ -159,4 +273,61 @@ button.btn-consul-copa:active {
 }
 table.table-responsive {
   border: none !important;
+}
+.cont-cabe-table {
+  background: #1b437a;
+  color: #fff;
+  font-family: 'flama-l', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+.cont-cabe-table td {
+  border-color: #0078bd !important;
+  border-style: solid !important;
+  border-width: 0 2px 0 !important;
+  color: #fff;
+}
+.cont-cabe-table td:nth-child(1) {
+  border: none !important;
+}
+.cont-cabe-table td:nth-child(4) {
+  border: none !important;
+}
+.ico-balon {
+  background-image: url("../images/ico-balon.png");
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+}
+.cont-infor-table {
+  background: #0078bd;
+}
+.cont-infor-table td {
+  border-color: #1b437a !important;
+  border-style: solid !important;
+  border-width: 0 2px 0 !important;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: center;
+}
+.cont-infor-table td:nth-child(1) {
+  border: none !important;
+}
+.cont-infor-table td:nth-child(2) {
+  text-align: left;
+}
+.cont-infor-table td:nth-child(4) {
+  border: none !important;
+}
+.cont-info-fin {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+@media (max-width: 1368px) {
+  .switch label {
+    font-size: 1.6rem;
+    width: 24rem;
+  }
 }

@@ -81,9 +81,12 @@ block content
 
 
 				form
-					div.
-
-						Aqui va su puto swicth .... Salud
+					div.col-lg-12.col-md-12.col-sm-12.col-xs-12.cont-switch
+						div.switch
+							label.center-block Departamental
+								input(type="checkbox")
+								span.lever
+								| Nacional
 
 					div.col-lg-5.col-md-6.col-sm-6.col-xs-12.col-lg-offset-1
 						label.
@@ -107,12 +110,12 @@ block content
 					div.col-lg-12.col-md-12.col-sm-12.col-xs-12
 						button.btn.btn-consul-copa.center-block(type="button") Consultar
 
-				div.col-lg-10.col-md-10.col-sm-6.col-xs-12
+				div.col-lg-10.col-md-12.col-sm-12.col-xs-12.col-lg-offset-1
 					table.table
-						thead
+						thead.cont-cabe-table
 							tr
 								td
-									i
+									i.ico-balon
 								td.
 									Colegio
 								td.
@@ -120,7 +123,7 @@ block content
 								td.
 									PT
 
-						tbody
+						tbody.cont-infor-table
 
 							tr
 								td.
@@ -140,8 +143,14 @@ block content
 									12
 								td.
 									34
-				p.
-					Convenciones:  PJ: Partidos jugados, PT: Puntos.	
+				
+				div.col-lg-6.col-md-6.col-sm-12.col-xs-12.col-lg-offset-4.col-lg-offset-4.cont-info-fin
+					p.
+						Convenciones:  PJ: Partidos jugados, PT: Puntos.
+
+		div.row
+			div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+				img.img-responsive.center-block(src="images/img-final.png")
 
 						
 
