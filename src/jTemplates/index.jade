@@ -1,41 +1,151 @@
 //-Layout Base
 extends partials/base.jade
 
-//-Etiqueta Title
-block title
-	- var seccion = "Demo"
-	- var titulo = "Home";
-	
-	title Ejemplo de meta title | #{titulo}
-
 //-Etiqueta Metadescription
 block description
 	meta(name="description", content="Frontend BRM" )
 
-//-Breadcrumbs
-block migas
-	li  #{titulo}
 
 block content
 
 	section.container-fluid
+		div.row.cont-titular
+
+			div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+				h2.
+					Eliminatorias
+
+		div.row
+			div
+				div#accordion(role="tablist",aria-multiselectable="true")
+					div.col-lg-4.col-md-4.col-sm-6.col-xs-12.col-lg-offset-2.col-md-offset-2
+
+						a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+							div(role="tab", id="headingOne")
+								h3.cont-fase-depar.
+									Fase Departamental
+
+						div.cont-info-acor.in#collapseOne(role="tabpanel",aria-labelledby="headingOne")
+							div.panel-body
+								table.table
+									tr
+										td.
+											<strong>Fecha:</strong>
+										td.
+											Marzo 5 a abril 30 de 2016.
+
+									tr
+										td.
+											<strong>Categor&iacute;as:</strong>
+										td.
+											Infantil (niños 12 a 13 años)
+									tr
+										td.
+											<strong>Sedes:</strong>
+										td.
+											Armenia, Cartago, Zarzal, Tuluá, Buga, Palmira, Cali, Buenaventura.
+									
+									
+							
+
+					div.col-lg-4.col-md-4.col-sm-6.col-xs-12
+						a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseTwo", aria-expanded="true", aria-controls="collapseTwo")
+							div(role="tab", id="headingTwo")
+								h3.cont-fase-nacio.
+									Fase Nacional
+
+						div.cont-info-acor.in#collapseTwo(role="tabpanel",aria-labelledby="headingTwo")
+							div.panel-body
+								table.table
+									tr
+										td.
+											<strong>Fecha:</strong>
+										td.
+											Marzo 5 a abril 30 de 2016.
+
+									tr
+										td.
+											<strong>Categor&iacute;as:</strong>
+										td.
+											Infantil (niños 12 a 13 años)
+									tr
+										td.
+											<strong>Sedes:</strong>
+										td.
+											Armenia, Cartago, Zarzal, Tuluá, Buga, Palmira, Cali, Buenaventura.
 		div.row
 
-			article.col-lg-10.col-md-10.col-sm-10.col-xs-12.col-lg-offset-1.col-md-offset-1.col-sm-offset-1
-				div.titularSeccion
-					h1= titulo
-
-					h4 hola que hace
+			div.col-lg-8.col-md-8.col-sm-12.col-xs-12.col-lg-offset-2.col-md-offset-2.cont-tabla-punt
+				h3.
+					Tabla de posiciones <i class="glyphicon glyphicon-search"></i>
 
 
+				form
+					div.
+
+						Aqui va su puto swicth .... Salud
+
+					div.col-lg-5.col-md-6.col-sm-6.col-xs-12.col-lg-offset-1
+						label.
+							Categor&iacute;a:
+
+						select.form-control
+							option.
+								Profesional
+							option.
+								Semi-Profesional
+					div.col-lg-5.col-md-6.col-sm-6.col-xs-12
+						label.
+							Ciudad:
+
+						select.form-control
+							option.
+								Bogot&aacute;
+							option.
+								Cali
+
+					div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+						button.btn.btn-consul-copa.center-block(type="button") Consultar
+
+				div.col-lg-10.col-md-10.col-sm-6.col-xs-12
+					table.table
+						thead
+							tr
+								td
+									i
+								td.
+									Colegio
+								td.
+									PJ
+								td.
+									PT
+
+						tbody
+
+							tr
+								td.
+									1
+								td.
+									San Alberto
+								td.
+									12
+								td.
+									34
+							tr
+								td.
+									2
+								td.
+									Colegio san jose de tal
+								td.
+									12
+								td.
+									34
 				p.
-					En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda. El resto della concluían sayo de velarte, calzas de velludo para las fiestas, con sus pantuflos de lo mesmo, y los días de entresemana se honraba con su vellorí de lo más fino. Tenía en su casa una ama que pasaba de los cuarenta, y una sobrina que no llegaba a los veinte, y un mozo de campo y plaza, que así ensillaba el rocín como tomaba la podadera. Frisaba la edad de nuestro hidalgo con los cincuenta años; era de complexión recia, seco de carnes, enjuto de rostro, gran madrugador y amigo de la caza. Quieren decir que tenía el sobrenombre de Quijada, o Quesada, que en esto hay alguna diferencia en los autores que deste caso escriben; aunque, por conjeturas verosímiles, se deja entender que se llamaba Quejana. Pero esto importa poco a nuestro cuento; basta que en la narración dél no se salga un punto de la verdad. 
+					Convenciones:  PJ: Partidos jugados, PT: Puntos.	
+
+						
 
 
+			
 
-	
-	
-
-block Scripts
-	script(src='https://apis.google.com/js/platform.js')
 
